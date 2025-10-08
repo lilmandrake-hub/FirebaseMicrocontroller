@@ -1,6 +1,6 @@
 # Proyek Monitoring Sensor DHT11 dengan ESP8266/ESP32 dan Google Firestore
 
-Proyek ini mendemonstrasikan cara membaca data suhu dan kelembaban dari sensor DHT11 menggunakan mikrokontroler ESP8266 atau ESP32 dan mengirimkannya ke Google Firestore untuk monitoring secara *real-time*.
+Ingin belajar menghubungkan perangkat fisik ke cloud? Proyek ini adalah titik awal yang sempurna! Anda akan belajar cara membaca data dari sensor DHT11 dan mengirimkannya ke Google Firestore untuk monitoring real-time dari mana saja. Kami menyediakan dua contoh kode yang jelas untuk platform ESP8266 dan ESP32, lengkap dengan penjelasan untuk membantu Anda membangun proyek IoT pertama Anda.
 
 Ini adalah proyek dasar yang sangat baik untuk memulai dengan Internet of Things (IoT), integrasi *cloud*, dan visualisasi data sensor.
 
